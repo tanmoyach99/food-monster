@@ -3,15 +3,15 @@ fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
 .then((res) => res.json())
 .then((data) => {
     const foods=data.meals;
-    console.log(data.meals);
+    // console.log(data.meals);
     const allFoods=document.getElementById('all-foods');
-    for (let i = 0; i < foods.length; i++) {
-        const meals = foods[i];
-        console.log(meals.strMeal);
+   foods.map(foods=> {
+        // const meals = foods[i];
+        // console.log(meals.strMeal);
         const foodsDiv=document.createElement('div');
-        const foodName=meals.strMeal;
-        const foodImg=meals.strMealThumb;
-        const foodId=meals.idMeal;
+        const foodName=foods.strMeal;
+        const foodImg=foods.strMealThumb;
+        const foodId=foods.idMeal;
         foodsDiv.innerHTML=`
         <div onclick="getMealDetails(${foodId})" class="food-card" class="card" style="width: 18rem;">
           <img src="${foodImg}" class="card-img-top" alt="...">
@@ -26,6 +26,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
 
         
     }
+   )
 });
 
 
