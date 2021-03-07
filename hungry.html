@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hungry-Monster</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hungry.css">
+</head>
+
+
+
+<body>
+
+    <!-- Navbar section -->
+    <header>
+       <div class="nav-details">
+        <ul class="ul-link  nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Recipe</a>
+            </li>
+          </ul>
+       </div>
+     </header>
+
+
+    <!-- Input section -->
+    <section class="container" id="all-food">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="search_input" type="text" class="form-control" placeholder="Enter a food name...">
+                <div class="input-group-append">
+                    <button type="button"  onclick="getSearchValue()" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        
+    <div class="food-list" row container" id="search-all-food"></div>
+    <section class="all-food-area" >
+        <div class="food-list"  id="all-foods"></div>
+    </section>
+    </section><section id="search-food"></section>
+        
+<script src="hungry.js"></script>
+
+</body>
+
+</html>
